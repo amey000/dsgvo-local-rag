@@ -1,0 +1,23 @@
+Kundenbeschwerde – Vorgang 2026-0412 (fiktives Beispiel)
+
+Absender: Herr Jürgen Müller, Lindenstraße 14, 50674 Köln
+Telefon: 0221 4710123
+E-Mail: juergen.mueller@example.com
+
+Sehr geehrte Damen und Herren,
+
+am 3. März 2026 habe ich bei Ihnen ein Jahresabonnement der Software „BuchhaltungPro“ zum Preis von
+240 Euro abgeschlossen. Der Betrag wurde zweimal von meinem Konto DE89 3704 0044 0532 0130 00
+abgebucht. Ich bitte um Rückerstattung der doppelten Abbuchung innerhalb von 14 Tagen.
+
+Außerdem funktioniert der Export im DATEV-Format seit dem letzten Update (Version 4.2) nicht mehr.
+Beim Export erscheint die Fehlermeldung „Ungültiges Kontenrahmen-Mapping“.
+
+Mit freundlichen Grüßen
+Jürgen Müller
+
+---
+Interne Notiz Kundenservice (Bearbeiterin: Laura Fischer):
+Doppelte Abbuchung bestätigt, Rückerstattung über 240 Euro am 10. März 2026 an das Konto von Herrn
+Müller veranlasst. Der DATEV-Export-Fehler ist bekannt und wird mit Version 4.2.1 behoben; als
+Workaround kann im Exportdialog der Kontenrahmen SKR03 manuell ausgewählt werden.

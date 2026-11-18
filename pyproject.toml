@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsgvo-rag"
+version = "0.1.0"
+description = "DSGVO-konformes, vollständig lokales RAG-System mit Ollama, Qdrant und Microsoft Presidio"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "Amey Shete" }]
+keywords = ["rag", "dsgvo", "gdpr", "presidio", "qdrant", "ollama", "llm", "pii"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Natural Language :: German",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "presidio-analyzer>=2.2.366,<2.3",
+    "spacy>=3.8,<3.9",
+    "sentence-transformers>=6,<7",
+    "qdrant-client>=1.20,<2",
+    "fastapi>=0.163",
+    "uvicorn[standard]>=0.54",
+    "pydantic-settings>=2.16",
+    "httpx>=0.28",
+    "pypdf>=7",
+    "python-multipart>=0.0.34",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9", "ruff>=0.17"]
+
+[project.scripts]
+dsgvo-rag = "dsgvo_rag.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["slow: lädt das echte Embedding-Modell (multilingual-e5-large, ~2 GB)"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]  # deutsche Umlaute/Typografie in Strings sind gewollt
+
+[tool.ruff.lint.isort]
+known-first-party = ["dsgvo_rag"]
+known-local-folder = ["conftest"]

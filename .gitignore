@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+.env
+.DS_Store
+# Never commit real documents – only the fictional samples
+data/*
+!data/samples/
